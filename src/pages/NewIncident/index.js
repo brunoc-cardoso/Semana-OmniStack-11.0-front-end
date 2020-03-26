@@ -5,30 +5,26 @@ import { FiArrowLeft } from 'react-icons/fi';
 import './styles.css';
 import logoImg from '../../assets/logo.svg';
 
-export default function Register() {
+export default function NewIncident() {
   return (
-    <div className="register-container">
+    <div className="new-incident-container">
       <div className="content">
         <section>
           <img src={logoImg} alt="Be The Hero" />
 
-          <h1>Cadastro</h1>
-          <p>Faça seu cadastro, entre na plataforma e ajude pessoas a encontrarem os casos da sus ONG.</p>
+          <h1>Cadastrar novo caso</h1>
+          <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
 
           <Link className="back-link" to="/">
             <FiArrowLeft size={16} color="#E02041" />
-            Tenho cadastro
+            Voltar para home
           </Link>
         </section>
 
         <form>
-          <input placeholder="Nome da ONG" />
-          <input type="email" placeholder="E-mail" />
-          <input placeholder="WhatsApp" />
-          <div className="input-group">
-            <input placeholder="Cidade" />
-            <input placeholder="UF" style={{ width: 80 }} />
-          </div>
+          <input placeholder="Título do caso" />
+          <textarea placeholder="Descrição" />
+          <input placeholder="Valor em reais" />
 
           <button className="button" type="submit">Cadastrar</button>
         </form>
